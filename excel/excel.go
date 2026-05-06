@@ -233,8 +233,8 @@ func parseVulnData(resultTarget string, resultType ftypes.TargetType, resultClas
 		data = append(data, dbTypes.Statuses[vuln.Status])
 	}
 
-	data = append(data, vuln.PublishedDate)
-	return append(data, vuln.LastModifiedDate), nil
+	data = append(data, utils.FormatTime(vuln.PublishedDate,false))
+	return append(data, utils.FormatTime(vuln.LastModifiedDate,falise)), nil
 }
 
 // cellName Construct the cell name according to the row number and column number.
