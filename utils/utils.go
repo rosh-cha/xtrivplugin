@@ -38,7 +38,7 @@ func FormatTime(t *time.Time, Chinese bool) string {
 		return ""
 	}
 	if !Chinese {
-		return t.Format(""2006-01-02 15:04:05"")
+		return t.Format("2006-01-02 15:04:05")
 	}
 
 	location, err := time.LoadLocation("Asia/Shanghai")
